@@ -1,0 +1,6 @@
+@ITI.GrpcDemo.Server_HostAddress = http://localhost:5047
+
+GET {{ITI.GrpcDemo.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

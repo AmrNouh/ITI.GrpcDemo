@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option csharp_namespace = "ITI.GrpcDemo.Server.Protos";
+
+import "google/protobuf/timestamp.proto";
+
+service TrackingSerivce {
+	rpc ReviceMessage(TrackingMessage) returns (TrackingMessageResponse);
+}
+
+message TrackingMessage {
+	int32 DeviceId = 1;
+	string Message = 2;
+	Location Location = 3;
+	google.protobuf.Timestamp DateTime = 4;
+	repeated Sensor Sensors = 5;
+}
+
+message Location {
+	double Latitude = 1;
+	double Longitude = 2;
+}
+
+message Sensor {
+	string Name = 1;
+	double Value = 2;
+}
+
+message TrackingMessageResponse {
+	bool Status = 1;
+}
