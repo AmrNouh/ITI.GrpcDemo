@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34902.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITI.GrpcDemo.Server", "ITI.GrpcDemo.Server\ITI.GrpcDemo.Server.csproj", "{5E37A39D-C943-4A5A-9E05-E995C9D2530A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITI.GrpcDemo.Client", "ITI.GrpcDemo.Client\ITI.GrpcDemo.Client.csproj", "{3AD981EF-674C-4264-BE7F-B5B2E8F7107A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E37A39D-C943-4A5A-9E05-E995C9D2530A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E37A39D-C943-4A5A-9E05-E995C9D2530A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E37A39D-C943-4A5A-9E05-E995C9D2530A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E37A39D-C943-4A5A-9E05-E995C9D2530A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AD981EF-674C-4264-BE7F-B5B2E8F7107A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AD981EF-674C-4264-BE7F-B5B2E8F7107A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AD981EF-674C-4264-BE7F-B5B2E8F7107A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AD981EF-674C-4264-BE7F-B5B2E8F7107A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3C63CDA-7974-4194-B0F0-922BA47A8937}
+	EndGlobalSection
+EndGlobal
