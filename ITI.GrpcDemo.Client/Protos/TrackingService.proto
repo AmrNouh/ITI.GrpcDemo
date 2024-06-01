@@ -3,9 +3,12 @@ syntax = "proto3";
 option csharp_namespace = "ITI.GrpcDemo.Client.Protos";
 
 import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
 
 service TrackingSerivce {
 	rpc ReviceMessage(TrackingMessage) returns (TrackingMessageResponse);
+	rpc KeepAlive(stream PulseMessage) returns (google.protobuf.Empty);
+	rpc Subscribe(SubscribeMessage) returns (stream Nofication);
 }
 
 message TrackingMessage {
@@ -28,4 +31,32 @@ message Sensor {
 
 message TrackingMessageResponse {
 	bool Status = 1;
+}
+
+message PulseMessage {
+	
+	message AdditionalDetails {
+		string Title = 1;
+		string Description = 2;
+	}
+
+	int32 DeviceId = 1;
+	google.protobuf.Timestamp SentTime = 2;
+	MachineStatus Status = 3;
+	AdditionalDetails Details = 4;
+}
+
+enum MachineStatus {
+	UNKNOWN = 0;
+	START = 1;
+	STOP = 2;
+}
+
+message SubscribeMessage {
+	int32 DeviceId = 1;
+}
+
+message Nofication {
+	string Message = 1;
+	google.protobuf.Timestamp DateTime = 2;
 }
